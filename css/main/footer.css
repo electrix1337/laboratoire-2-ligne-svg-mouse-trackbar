@@ -1,0 +1,19 @@
+#footer {
+    background-color: var(--footerColor);
+    position: fixed;
+    height: auto;
+    width: 100%;
+    bottom: 0px;
+    z-index: 99;
+    display: block;
+}
+
+.creatorPageButton {
+    border: 1px black solid;
+    width: max-content;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 1px;
+}
+
+/*added*/

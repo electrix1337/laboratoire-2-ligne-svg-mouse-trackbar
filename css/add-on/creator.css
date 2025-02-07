@@ -1,0 +1,12 @@
+#content {
+    background-image: url(../images/background/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.backgroundLink {
+    position: fixed;
+    right: 0px;
+    bottom: var(--footerSize);
+}

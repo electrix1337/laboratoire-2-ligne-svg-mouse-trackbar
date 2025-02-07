@@ -1,0 +1,22 @@
+#header {
+    background-color: var(--headerColor);
+    position: fixed;
+    height: auto;
+    width: 100%;
+    top: 0px;
+    padding-top: var(--headerPadding-top);
+    padding-left: var(--headerPadding-sides);
+    padding-right: var(--headerPadding-sides);
+    padding-bottom: var(--headerPadding-bottom);
+    z-index: 99;
+    color: var(--headerTextColor);
+}
+
+
+/*added*/
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
