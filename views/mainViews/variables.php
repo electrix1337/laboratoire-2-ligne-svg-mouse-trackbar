@@ -16,7 +16,7 @@ $mainVariables = <<<HTML
             /*content*/
             --contentBackgroundColor: lightgrey;
             --textColor: white;
-            --contentPaddingSide: 50px;
+            --contentPaddingSide: 50px; /*if it is not in px, the mouse move function wont work in js/main/main.js*/
 
             /*fixed content*/
 

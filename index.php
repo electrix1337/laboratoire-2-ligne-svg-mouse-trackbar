@@ -9,13 +9,7 @@ $viewStyle = <<<HTML
 HTML;
 
 $viewContent = <<<HTML
-    <pre>
-        Remminder:
-        1. change the title of the pages
-        2. put the root location on all pages
-        3. change the pages variables in variables.php
-    </pre>
-
+    <h1>SVG</h1>
     <svg id="trackbar" viewBox="0 0 1562 255">
         <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -136,11 +130,6 @@ $viewContent = <<<HTML
             <text transform="matrix(1 0 0 1 1470.0513 230)" font-family="'ArialNarrow'">10</text>
         </g>
     </svg>
-    <svg id="trackBarCursor" viewBox="0 0 1562 255">
-        <g class="draggable">
-            <polygon id="cursor" fill="red" points="104,129 104,0 36,0 36,129 70,163 104,129 "/>
-        </g>
-    </svg> 
 HTML;
 
 $root = "./";

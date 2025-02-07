@@ -79,28 +79,33 @@ function mouseDown(e) {
 }
 function mouseMove(e) {
   let zoom = window.outerWidth / window.innerWidth;
+  let paddingSize = window.getComputedStyle(document.body).getPropertyValue('--contentPaddingSide');
+  let paddingSizeInt = parseInt(paddingSize.substring(0, paddingSize.length - 2));
+
+  let maxX = 1410;
+
+  let minX = paddingSizeInt + 62.7285;
   if (target) {
 
-    console.log(zoom);
     let mousePos = { x: e.offsetX, y: e.offsetY };
+    let deltax = offset.x + (mousePos.x - mouseDownPos.x) * zoom;
+    console.log(zoom);
     console.log(mousePos.x);
     console.log(mouseDownPos.x);
-    let deltax = offset.x + (mousePos.x - mouseDownPos.x) * zoom;
-    let deltay = offset.y + (mousePos.y - mouseDownPos.y) * zoom;
-    target.style.transform = "translate(" + deltax + "px, " +  deltay + "px)";
+    console.log(deltax);
+    console.log(minX);
+    if (0 <= deltax) {
+      if (maxX >= deltax) {
+        target.style.transform = "translate(" + deltax + "px, 0px)";
+      } else {
+        target.style.transform = "translate(" + maxX + "px, 0px)";
+      }
+    } else {
+      target.style.transform = "translate(" + 0 + "px, 0px)";
+    }
   }
 }
 function mouseUp(e){
   target.releasePointerCapture(e.pointerId);
   target = null;
 }
-/*
-$.fn.textHeight = function(){
-    var html_org = $(this).html();
-    var html_calc = '<span">' + html_org + '</span>';
-    $(this).html(html_calc);
-    var height = $(this).find('span:first').height();
-    console.log(height);
-    //$(this).html(html_org);
-    return height;
-  };*/

@@ -3,7 +3,7 @@ $root = "../../";
 $url = $root."css";
 
 $viewStyle = <<<HTML
-    <link rel="stylesheet" href="$url/creator.css">
+    <link rel="stylesheet" href="$url/add-on/creator.css">
 HTML;
 
 $viewContent = <<<HTML
